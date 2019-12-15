@@ -1,0 +1,66 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Repositories\Contracts\{{MODEL_NAME}}Interface;
+
+class {{MODEL_NAME}}Controller extends Controller
+{
+    /**
+     * @var {{MODEL_NAME}}Interface
+     */
+    protected ${{MODEL_NAME_CAMEL_CASE}}Repository;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct({{MODEL_NAME}}Interface ${{MODEL_NAME_CAMEL_CASE}}Repository)
+    {
+        $this->{{MODEL_NAME_CAMEL_CASE}}Repository = ${{MODEL_NAME_CAMEL_CASE}}Repository;
+    }
+
+    /**
+     * Show the view on desktop.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function indexDesktop()
+    {
+        $datas = [];
+        return view('mobile.{{MODEL_NAME_SNAKECASE}}', $datas);
+    }
+
+    /**
+     * Show the view on desktop.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function indexMobile()
+    {
+        $datas = [];
+
+        return view('desktop.{{MODEL_NAME_SNAKECASE}}', $datas);
+    }
+
+    /**
+     * Get datas
+     * @return array;
+     */
+    protected function getDatas() {
+        $datas = [];
+
+        return $datas;
+    }
+
+    /**
+     * Get page head metas
+     * @return array;
+     */
+    protected function getHeadMetas() {
+        $metas = [];
+
+        return $metas;
+    }
+}

@@ -1,0 +1,4 @@
+        $this->app->singleton(
+            \App\Repositories\Contracts\{{MODEL_NAME}}Interface::class,
+            \App\Repositories\{{MODEL_NAME}}Repository::class
+        );

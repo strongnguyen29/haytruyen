@@ -1,0 +1,11 @@
+<?php
+
+namespace App\Repositories;
+
+
+use App\Repositories\Contracts\{{MODEL_NAME}}Interface;
+
+class {{MODEL_NAME}}Repository implements {{MODEL_NAME}}Interface
+{
+
+}
